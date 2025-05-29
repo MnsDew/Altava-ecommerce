@@ -2,6 +2,7 @@
 
 Altava is a full-stack, scalable, and modular e-commerce platform inspired by real-world systems like Amazon and Trendyol. It supports customers, vendors, and admins across web and mobile platforms. This project is designed with best practices in software architecture using the C4 model and detailed UML diagrams.
 
+live: altava-ecommerce-genesis.lovable.app
 ---
 
 ## 📐 Architecture Overview
