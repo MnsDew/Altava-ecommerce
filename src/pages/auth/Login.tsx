@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '@/contexts/AuthContext';
+import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -15,6 +16,7 @@ const Login = () => {
   const [error, setError] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const { login } = useAuth();
+  const { t } = useLanguage();
   const navigate = useNavigate();
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -33,12 +35,19 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
-      <Card className="w-full max-w-md">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-orange-50 via-white to-gray-50 py-12 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+      {/* Animated Background */}
+      <div className="absolute inset-0">
+        <div className="absolute -top-40 -right-32 w-96 h-96 bg-gradient-to-r from-orange-400 to-orange-600 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
+        <div className="absolute -bottom-40 -left-32 w-96 h-96 bg-gradient-to-r from-orange-500 to-orange-700 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
+        <div className="absolute top-40 left-40 w-96 h-96 bg-gradient-to-r from-orange-300 to-orange-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"></div>
+      </div>
+
+      <Card className="w-full max-w-md relative z-10 bg-white/90 backdrop-blur-sm shadow-xl animate-fade-in-up">
         <CardHeader className="space-y-1">
-          <CardTitle className="text-2xl text-center">Sign in to Altava</CardTitle>
-          <CardDescription className="text-center">
-            Enter your email below to sign in to your account
+          <CardTitle className="text-2xl text-center text-gray-900">{t('auth.signInToAccount')}</CardTitle>
+          <CardDescription className="text-center text-gray-600">
+            {t('auth.enterEmail')}
           </CardDescription>
         </CardHeader>
         <CardContent>
@@ -50,17 +59,17 @@ const Login = () => {
             )}
             
             {/* Demo credentials */}
-            <Alert>
-              <AlertDescription>
-                <strong>Demo Credentials:</strong><br/>
-                Admin: admin@altava.com / password<br/>
-                Vendor: vendor@altava.com / password<br/>
-                Customer: customer@altava.com / password
+            <Alert className="bg-orange-50 border-orange-200">
+              <AlertDescription className="text-orange-800">
+                <strong>{t('auth.demoCredentials')}:</strong><br/>
+                {t('auth.admin')}: admin@altava.com / password<br/>
+                {t('auth.vendor')}: vendor@altava.com / password<br/>
+                {t('auth.customer')}: customer@altava.com / password
               </AlertDescription>
             </Alert>
 
             <div className="space-y-2">
-              <Label htmlFor="email">Email</Label>
+              <Label htmlFor="email">{t('auth.email')}</Label>
               <Input
                 id="email"
                 type="email"
@@ -68,30 +77,36 @@ const Login = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
+                className="transition-all duration-200 focus:ring-2 focus:ring-orange-500"
               />
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="password">Password</Label>
+              <Label htmlFor="password">{t('auth.password')}</Label>
               <Input
                 id="password"
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required
+                className="transition-all duration-200 focus:ring-2 focus:ring-orange-500"
               />
             </div>
 
-            <Button type="submit" className="w-full" disabled={isLoading}>
+            <Button 
+              type="submit" 
+              className="w-full bg-orange-500 hover:bg-orange-600 text-white shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300" 
+              disabled={isLoading}
+            >
               {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-              Sign In
+              {t('auth.signIn')}
             </Button>
           </form>
 
           <div className="mt-6 text-center text-sm">
-            <span className="text-muted-foreground">Don't have an account? </span>
-            <Link to="/register" className="font-medium text-primary hover:underline">
-              Sign up
+            <span className="text-gray-600">{t('auth.dontHaveAccount')} </span>
+            <Link to="/register" className="font-medium text-orange-600 hover:text-orange-500 hover:underline transition-colors">
+              {t('auth.signUp')}
             </Link>
           </div>
         </CardContent>

@@ -53,7 +53,242 @@ const translations: Translations = {
     ar: 'تسجيل الخروج',
     tr: 'Çıkış'
   },
-  
+
+  // Dashboard Common
+  'dashboard.title': {
+    en: 'Dashboard',
+    ar: 'لوحة التحكم',
+    tr: 'Kontrol Paneli'
+  },
+  'dashboard.welcome': {
+    en: 'Welcome back',
+    ar: 'مرحباً بعودتك',
+    tr: 'Tekrar hoş geldiniz'
+  },
+  'dashboard.analytics': {
+    en: 'Analytics',
+    ar: 'التحليلات',
+    tr: 'Analitik'
+  },
+  'dashboard.settings': {
+    en: 'Settings',
+    ar: 'الإعدادات',
+    tr: 'Ayarlar'
+  },
+  'dashboard.recentActivity': {
+    en: 'Recent Activity',
+    ar: 'النشاط الأخير',
+    tr: 'Son Aktivite'
+  },
+  'dashboard.quickActions': {
+    en: 'Quick Actions',
+    ar: 'الإجراءات السريعة',
+    tr: 'Hızlı İşlemler'
+  },
+
+  // Admin Dashboard
+  'admin.dashboard': {
+    en: 'Admin Dashboard',
+    ar: 'لوحة تحكم المدير',
+    tr: 'Yönetici Paneli'
+  },
+  'admin.userManagement': {
+    en: 'User Management',
+    ar: 'إدارة المستخدمين',
+    tr: 'Kullanıcı Yönetimi'
+  },
+  'admin.vendorApproval': {
+    en: 'Vendor Approval',
+    ar: 'موافقة الموردين',
+    tr: 'Satıcı Onayı'
+  },
+  'admin.totalUsers': {
+    en: 'Total Users',
+    ar: 'إجمالي المستخدمين',
+    tr: 'Toplam Kullanıcı'
+  },
+  'admin.totalOrders': {
+    en: 'Total Orders',
+    ar: 'إجمالي الطلبات',
+    tr: 'Toplam Sipariş'
+  },
+  'admin.revenue': {
+    en: 'Revenue',
+    ar: 'الإيرادات',
+    tr: 'Gelir'
+  },
+  'admin.growth': {
+    en: 'Growth',
+    ar: 'النمو',
+    tr: 'Büyüme'
+  },
+
+  // Vendor Dashboard
+  'vendor.dashboard': {
+    en: 'Vendor Dashboard',
+    ar: 'لوحة تحكم المورد',
+    tr: 'Satıcı Paneli'
+  },
+  'vendor.products': {
+    en: 'Products',
+    ar: 'المنتجات',
+    tr: 'Ürünler'
+  },
+  'vendor.orders': {
+    en: 'Orders',
+    ar: 'الطلبات',
+    tr: 'Siparişler'
+  },
+  'vendor.totalProducts': {
+    en: 'Total Products',
+    ar: 'إجمالي المنتجات',
+    tr: 'Toplam Ürün'
+  },
+  'vendor.conversion': {
+    en: 'Conversion',
+    ar: 'التحويل',
+    tr: 'Dönüşüm'
+  },
+  'vendor.recentOrders': {
+    en: 'Recent Orders',
+    ar: 'الطلبات الأخيرة',
+    tr: 'Son Siparişler'
+  },
+  'vendor.topProducts': {
+    en: 'Top Products',
+    ar: 'أفضل المنتجات',
+    tr: 'En İyi Ürünler'
+  },
+  'vendor.productManagement': {
+    en: 'Product Management',
+    ar: 'إدارة المنتجات',
+    tr: 'Ürün Yönetimi'
+  },
+  'vendor.addProduct': {
+    en: 'Add Product',
+    ar: 'إضافة منتج',
+    tr: 'Ürün Ekle'
+  },
+  'vendor.yourProducts': {
+    en: 'Your Products',
+    ar: 'منتجاتك',
+    tr: 'Ürünleriniz'
+  },
+  'vendor.stock': {
+    en: 'Stock',
+    ar: 'المخزون',
+    tr: 'Stok'
+  },
+  'vendor.active': {
+    en: 'Active',
+    ar: 'نشط',
+    tr: 'Aktif'
+  },
+  'vendor.outOfStock': {
+    en: 'Out of Stock',
+    ar: 'نفد المخزون',
+    tr: 'Stokta Yok'
+  },
+
+  // Customer Dashboard
+  'customer.dashboard': {
+    en: 'Customer Dashboard',
+    ar: 'لوحة تحكم العميل',
+    tr: 'Müşteri Paneli'
+  },
+  'customer.totalOrders': {
+    en: 'Total Orders',
+    ar: 'إجمالي الطلبات',
+    tr: 'Toplam Sipariş'
+  },
+  'customer.totalSpent': {
+    en: 'Total Spent',
+    ar: 'إجمالي المنفق',
+    tr: 'Toplam Harcama'
+  },
+  'customer.wishlistItems': {
+    en: 'Wishlist Items',
+    ar: 'عناصر المفضلة',
+    tr: 'Favori Ürünler'
+  },
+  'customer.cartItems': {
+    en: 'Cart Items',
+    ar: 'عناصر السلة',
+    tr: 'Sepet Ürünleri'
+  },
+  'customer.browseProducts': {
+    en: 'Browse Products',
+    ar: 'تصفح المنتجات',
+    tr: 'Ürünleri İncele'
+  },
+  'customer.viewOrderHistory': {
+    en: 'View Order History',
+    ar: 'عرض تاريخ الطلبات',
+    tr: 'Sipariş Geçmişi'
+  },
+  'customer.viewCart': {
+    en: 'View Cart',
+    ar: 'عرض السلة',
+    tr: 'Sepeti Görüntüle'
+  },
+
+  // Auth
+  'auth.signIn': {
+    en: 'Sign In',
+    ar: 'تسجيل الدخول',
+    tr: 'Oturum Aç'
+  },
+  'auth.signInToAccount': {
+    en: 'Sign in to Altava',
+    ar: 'تسجيل الدخول إلى ألتافا',
+    tr: 'Altava\'ya Giriş Yap'
+  },
+  'auth.enterEmail': {
+    en: 'Enter your email below to sign in to your account',
+    ar: 'أدخل بريدك الإلكتروني أدناه لتسجيل الدخول إلى حسابك',
+    tr: 'Hesabınıza giriş yapmak için e-postanızı girin'
+  },
+  'auth.email': {
+    en: 'Email',
+    ar: 'البريد الإلكتروني',
+    tr: 'E-posta'
+  },
+  'auth.password': {
+    en: 'Password',
+    ar: 'كلمة المرور',
+    tr: 'Şifre'
+  },
+  'auth.demoCredentials': {
+    en: 'Demo Credentials',
+    ar: 'بيانات الاختبار',
+    tr: 'Demo Giriş Bilgileri'
+  },
+  'auth.admin': {
+    en: 'Admin',
+    ar: 'مدير',
+    tr: 'Yönetici'
+  },
+  'auth.vendor': {
+    en: 'Vendor',
+    ar: 'مورد',
+    tr: 'Satıcı'
+  },
+  'auth.customer': {
+    en: 'Customer',
+    ar: 'عميل',
+    tr: 'Müşteri'
+  },
+  'auth.dontHaveAccount': {
+    en: "Don't have an account?",
+    ar: 'ليس لديك حساب؟',
+    tr: 'Hesabınız yok mu?'
+  },
+  'auth.signUp': {
+    en: 'Sign up',
+    ar: 'سجل',
+    tr: 'Kayıt ol'
+  },
+
   // Landing Page
   'landing.welcome': {
     en: 'Welcome to',
@@ -237,6 +472,46 @@ const translations: Translations = {
     ar: 'جاري تحميل المنتجات...',
     tr: 'Ürünler yükleniyor...'
   },
+  'products.showing': {
+    en: 'Showing',
+    ar: 'عرض',
+    tr: 'Gösteriliyor'
+  },
+  'products.products': {
+    en: 'products',
+    ar: 'منتجات',
+    tr: 'ürün'
+  },
+  'products.nameAZ': {
+    en: 'Name A-Z',
+    ar: 'الاسم أ-ي',
+    tr: 'İsim A-Z'
+  },
+  'products.highestRated': {
+    en: 'Highest Rated',
+    ar: 'الأعلى تقييماً',
+    tr: 'En Yüksek Puanlı'
+  },
+  'products.category': {
+    en: 'Category',
+    ar: 'الفئة',
+    tr: 'Kategori'
+  },
+  'products.by': {
+    en: 'by',
+    ar: 'بواسطة',
+    tr: 'satıcı'
+  },
+  'products.inStock': {
+    en: 'in stock',
+    ar: 'في المخزون',
+    tr: 'stokta'
+  },
+  'products.outOfStock': {
+    en: 'Out of stock',
+    ar: 'نفد المخزون',
+    tr: 'Stokta yok'
+  },
 
   // Common
   'common.notFound': {
@@ -283,6 +558,11 @@ const translations: Translations = {
     en: 'Edit',
     ar: 'تعديل',
     tr: 'Düzenle'
+  },
+  'common.search': {
+    en: 'Search',
+    ar: 'بحث',
+    tr: 'Ara'
   }
 };
 
