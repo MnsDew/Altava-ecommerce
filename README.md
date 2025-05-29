@@ -1,73 +1,130 @@
-# Welcome to your Lovable project
+# 🛍️ Altava E-Commerce Platform
 
-## Project info
+Altava is a full-stack, scalable, and modular e-commerce platform inspired by real-world systems like Amazon and Trendyol. It supports customers, vendors, and admins across web and mobile platforms. This project is designed with best practices in software architecture using the C4 model and detailed UML diagrams.
 
-**URL**: https://lovable.dev/projects/9ee1b68e-4746-4ab4-abb5-8d6f6efaebde
+---
 
-## How can I edit this code?
+## 📐 Architecture Overview
 
-There are several ways of editing your application.
+Altava follows a microservice-friendly layered architecture with separation of concerns between frontend, backend, services, and databases. It is documented using:
 
-**Use Lovable**
+- 🧭 **C4 Model** (Context, Container, Component, Code)
+- 🧩 **UML Diagrams** (Use Case, Class, Sequence, Activity, Deployment, ERD)
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/9ee1b68e-4746-4ab4-abb5-8d6f6efaebde) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🚀 Tech Stack
 
-**Use your preferred IDE**
+| Layer             | Technology                           |
+|------------------|--------------------------------------|
+| Frontend (Web)   | React.js                             |
+| Frontend (Mobile)| Flutter (Planned)                    |
+| Backend Services | Node.js (Auth, Notifications, APIs)  |
+| Backend Services | Spring Boot (Product, Cart)          |
+| API Gateway      | Kong / NGINX                         |
+| Databases        | PostgreSQL (Transactional data)      |
+|                  | MongoDB (Products, Carts)            |
+| Cache Layer      | Redis                                |
+| Notifications    | Twilio / Firebase / SendGrid         |
+| Payments         | Stripe / PayPal / PayTR              |
+| Diagrams         | Draw.io / PlantUML / Lucidchart      |
+| DevOps           | Docker, GitHub, Cloud (AWS/Azure)    |
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 📦 Features
 
-Follow these steps:
+### 👥 Users
+- Customer: Browse, search, add to cart, checkout, track orders, leave reviews.
+- Vendor: Manage products, inventory, view orders, sales reports.
+- Admin: Manage users/vendors, handle complaints, view reports, manage content.
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### 💻 Functionalities
+- Role-based registration/login with JWT
+- Product catalog with filters and search
+- Cart management with Redis caching
+- Checkout, payment, and order processing
+- Admin and vendor dashboards
+- Real-time order tracking with external delivery APIs
+- Email/SMS notifications
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+---
 
-# Step 3: Install the necessary dependencies.
-npm i
+## 🔐 Security & Performance
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+- JWT + OAuth2 authentication
+- Role-based access control
+- HTTPS only communication
+- Input sanitization & validation (XSS, CSRF, SQLi)
+- Redis caching for performance boost
+- Asynchronous processing (notifications, shipping)
+- Rate limiting, audit logging, secure API keys
 
-**Edit a file directly in GitHub**
+---
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 📊 System Diagrams
 
-**Use GitHub Codespaces**
+Altava is designed with 9 core architecture diagrams:
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+1. **Context Diagram** – High-level system overview
+2. **Container Diagram** – System containers and technologies
+3. **Component Diagram** – Backend services and their responsibilities
+4. **Deployment Diagram** – Cloud-based infrastructure
+5. **Use Case Diagram** – Roles and actions
+6. **Class Diagram** – Core class relationships and responsibilities
+7. **Sequence Diagram** – Order placement and payment flow
+8. **Activity Diagram** – Customer purchase process
+9. **ER Diagram** – Database entities and relationships
 
-## What technologies are used for this project?
+---
 
-This project is built with:
+## 📁 Folder Structure (Monorepo)
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+```bash
+Altava-ecommerce/
+├── apps/
+│   ├── web-client/               # React frontend for customers, vendors, and admins
+│   └── mobile-client/            # Flutter mobile app (optional, future support)
+│
+├── services/                     # Backend microservices (Node.js + Spring Boot)
+│   ├── api-gateway/              # Kong or NGINX gateway with routing/auth
+│   ├── auth-service/             # Node.js Auth & User service
+│   ├── product-service/          # Spring Boot service for product catalog
+│   ├── cart-service/             # Spring Boot service for cart operations
+│   ├── order-service/            # Order processing, checkout, and coordination
+│   ├── payment-service/          # Stripe/PayPal integration
+│   ├── shipping-service/         # External courier API integration
+│   └── notification-service/     # Email/SMS notifications (e.g., via Twilio)
+│
+├── libs/                         # Shared libraries/utilities (if needed)
+│   └── common/                   # DTOs, response models, helper functions
+│
+├── config/                       # Environment variables, config files
+│   ├── gateway/                  # API gateway routes and plugins
+│   ├── nginx/                    # Optional NGINX reverse proxy setup
+│   └── docker/                   # Docker Compose, Dockerfiles for all services
+│
+├── database/
+│   ├── postgresql/               # SQL scripts and migrations (ACID data)
+│   └── mongodb/                  # Sample documents or schema setup (NoSQL)
+│
+├── tests/
+│   ├── unit/                     # Unit tests for services
+│   └── integration/             # Cross-service integration and e2e tests
+│
+├── docs/                         # Architecture and UML diagrams (9 total)
+│   ├── context-diagram.png
+│   ├── container-diagram.png
+│   ├── component-diagram.png
+│   ├── deployment-diagram.png
+│   ├── usecase-diagram.png
+│   ├── class-diagram.png
+│   ├── activity-diagram.png
+│   ├── sequence-diagram.png
+│   └── er-diagram.png
+│
+├── .env.example                  # Example environment configuration
+├── docker-compose.yml           # Unified container orchestration
+├── README.md                     # Project overview (you’ll paste it here)
+└── LICENSE
 
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/9ee1b68e-4746-4ab4-abb5-8d6f6efaebde) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
