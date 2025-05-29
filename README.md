@@ -1,8 +1,7 @@
 # 🛍️ Altava E-Commerce Platform
 
 Altava is a full-stack, scalable, and modular e-commerce platform inspired by real-world systems like Amazon and Trendyol. It supports customers, vendors, and admins across web and mobile platforms. This project is designed with best practices in software architecture using the C4 model and detailed UML diagrams.
-
-live: altava-ecommerce-genesis.lovable.app
+ 
 ---
 
 ## 📐 Architecture Overview
@@ -32,6 +31,12 @@ Altava follows a microservice-friendly layered architecture with separation of c
 | DevOps           | Docker, GitHub, Cloud (AWS/Azure)    |
 
 ---
+## 🚀 Live Demo
+
+You can access the deployed version of the project here:
+
+👉 [altava-ecommerce-genesis.lovable.app](https://altava-ecommerce-genesis.lovable.app)
+
 
 ## 📦 Features
 
